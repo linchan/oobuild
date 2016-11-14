@@ -1,0 +1,351 @@
+// 数据包
+// by linz 20160406
+.packet-ctrl {
+    .p-btn {
+        width: 118px;
+        .btn(28px,12px);
+        float: right;
+        &.dis {
+            color: #fff;
+            border-color: #e5e5e5;
+            background-color: #e5e5e5;
+            cursor: not-allowed;
+            &:hover {
+                border-color: #e5e5e5;
+            }
+        }
+    }
+}
+
+.packet-list {
+    table.p-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #eaeaea;
+        thead {
+            background-color: #f4f4f4;
+            th {
+                height: 42px;
+            }
+        }
+        .minus{
+            display: none;
+        }
+        .active{
+            .plus{
+                display: none;
+            }
+            .minus{
+                display: inline;
+            }
+        }
+        th, td {
+            &.blank {
+                width: 18px;
+            }
+            &.open {
+                width: 50px;
+                -webkit-user-select: none;
+                i {
+                    font-size: 16px;
+                    line-height: 1;
+                    border: 1px solid #e4e4e4;
+                    cursor: pointer;
+                    color: #9b9b9b;
+                    &.close {
+                        // .icon-icon-p_close();
+                    }
+                    &.open {
+                        // .icon-icon-p_open();
+                    }
+                }
+            }
+            &.date {
+                width: 210px;
+            }
+            &.amount {
+                width: 170px;
+            }
+            &.pic {
+                width: 200px
+            }
+            &.ctrl {
+                a.blue-btn {
+                    margin-right: 10px;
+                }
+            }
+        }
+        tr {
+            &.opened {
+                td {
+                    height: auto;
+                }
+            }
+        }
+        td {
+            height: 48px;
+        }
+    }
+    ul.item-list {
+        padding: 15px 0 0;
+        height: auto;
+        overflow: hidden;
+        border-top: 1px dotted #D7D7D7;
+        li {
+            width: 150px;
+            height: 178px;
+            float: left;
+            margin: 0 8px 10px 0;
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            .pic {
+                img{
+                    display: block;
+                }
+            }
+            .text {
+                height: 30px;
+                padding: 0 5px;
+                line-height: 30px;
+                overflow: hidden;
+                a {
+                    color: @colorG2;
+                    &:hover {
+                        color: @color_pink_dark;
+                    }
+                }
+            }
+            &.last {
+            	margin-right:0;
+            }
+        }
+    }
+}
+
+
+
+.create-data {
+	background-color:#fff;
+	.c-list {
+		border:1px solid #EBEBEB;
+		dl {
+			height: 120px;
+			padding: 20px 0 20px 20px;
+			border-bottom: 1px solid #EBEBEB;
+			dt {
+				float: left;
+				width: 120px;
+				height: 120px;
+				border:1px solid #EBEBEB;
+				text-align: center;
+			}
+			dd {
+				float: left;
+				padding-left:50px;
+				height: 120px;
+				overflow: hidden;
+				ul {
+					margin-top: 1px;
+					li {
+						float: left;
+						height: 30px;
+						line-height: 30px;
+						margin-bottom: 14px;
+						&.label {
+							width: 75px;
+							clear:left;
+						}
+						&.ipt {
+							width: 222px;
+							padding-right:5px;
+							input {
+								width: 200px;
+								padding: 0 10px;
+								height: 28px;
+								border:1px solid #E5E5E5;
+								color:@colorG2;
+							}
+
+						}
+						&.desc {
+							color:@colorG3;
+							width: 450px;
+							padding-left: 10px;
+							&.fh {
+								padding-left: 0;
+								width: 30px;
+							}
+						}
+						&.long {
+							width: 402px;
+							input {
+								width: 380px;
+							}
+						}
+					}
+				}
+			}
+			&.last {
+				border-bottom-color: #fff;
+			}
+		}
+	}
+	.c-ctrl {
+		padding: 20px 0 60px;
+		a.btn-back {
+			line-height: 40px;
+		}
+		a.btn-create {
+			.btn(38px, 16px);
+			.btn-fill();
+			float: left;
+			margin: 0 20px;
+			width: 178px;
+		}
+	}
+}
+
+
+.tempWrap {
+	padding: 0 20px;
+	.wrap-l {
+		float: left;
+		width: 60px;
+		padding: 22px 15px 0 0;
+		color:@colorG1;
+	}
+	.wrap-r {
+		width: 675px;
+		padding-top: 15px;
+		.short {
+			input {
+				width: 160px;
+				padding: 0 10px;
+				margin-right:10px;
+				height: 30px;
+				line-height: 30px;
+				border:1px solid #ddd;
+				font-size: 14px;
+				color:@colorG2;
+			}
+		}
+	}
+	.linesup {
+		.lu-Ele {
+			margin: 3px 15px 5px 0;
+			a {
+				color:@colorG2;
+			}
+		}
+	}
+	.btns {
+		padding-top: 30px;
+		clear:both;
+		text-align: center;
+		a {
+			float: left;
+			.btn(28px,14px);
+			width: 100px;
+			margin: 0 5px;
+			&.set {
+				.btn-fill();
+			}
+			&.cancel {
+				margin-left: 295px;
+			}
+		}
+	}
+}
+
+.ta-box {
+	width: 675px;
+	.ta-tag {
+		position: relative;
+		width: 162px;
+		height: 30px;
+		border:1px solid #E5E5E5;
+		border-right:none;
+		border-bottom:none;
+		span {
+			position: absolute;
+			top:0px;
+			left:0px;
+			display: block;
+			float: left;
+			width: 80px;
+			height: 30px;
+			text-align: center;
+			line-height: 29px;
+			border-right:1px solid #E5E5E5;
+			background-color:#FAFAFA;
+			cursor: pointer;
+			&.sec {
+				left: 81px;
+			}
+			&.curr {
+				background:#fff;
+				border-bottom:1px solid #fff;
+			}
+		}
+	}
+	.ta-content {
+		width: 620px;
+		height: 150px;
+		border:1px solid #ddd;
+		padding: 15px;
+		background-color: #fff;
+		textarea {
+			width: 598px;
+			height: 150px;
+			line-height: 30px;
+			border:none;
+			resize:none;
+			outline:none;
+		}
+	}
+}
+
+
+.linesup{
+	font-size:0;
+	.lu-Ele{
+		display:inline-block;
+		margin:10px 15px 0 0;
+	}
+}
+
+.easyRadio{
+	position:relative;
+	cursor:pointer;
+	padding-left:26px;
+	overflow:hidden;
+	font-size:14px;
+	i{
+		position:relative;
+		top:3px;
+		margin:0;
+	}
+	span.tit {
+		color:@colorG2;
+		margin-right: 10px;
+	}
+	span.desc {
+		color:@colorG3;
+		font-size: 12px;
+	}
+    &.checked {
+    	i{
+    	}
+    }
+}
+
+
+
+.layer-ext-moon {
+	&.layui-layer-dialog {
+		.layui-layer-title,.layui-layer-content {
+			text-align:left;
+		}
+	}
+
+}

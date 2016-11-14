@@ -1,0 +1,158 @@
+.draw {
+    border: 1px solid #EBEBEB;
+    margin-top: 10px;
+    .draw-title {
+        padding: 15px 20px;
+        height: 30px;
+        line-height: 30px;
+        border-bottom:1px solid #F5F5F5;
+        h2 {
+            font-size:16px;
+        }
+        .draw-title-count {
+            width: 300px;
+            span {
+                color:@color_pink_dark;
+                font-size: 16px;
+                em {
+                    .fontPrice();
+                    font-weight: bold;
+                }
+            }
+        }
+        a.draw-edit-btn {
+            .btn(28px, 12px);
+            width: 120px;
+        }
+    }
+    .draw-section {
+        padding:40px;
+        .draw-section-tip {
+            display: block;
+            font-size:16px;
+            line-height: 1;
+            color:@colorG1;
+            margin-bottom: 20px;
+        }
+
+        ul.account-list {
+            li {
+                height: 16px;
+                line-height: 16px;
+                margin-bottom: 10px;
+                i {
+                    margin-right: 5px;
+                    cursor: pointer;
+                    &.v-radio-checked {
+                        display:none;
+                        color:@color_pink;
+                    }
+                    &.v-radio {
+                        color:#e5e5e5;
+                        display: inline;
+                    }
+                }
+                span {
+                    cursor: pointer;
+
+                }
+                &.checked {
+                    i {
+                        &.v-radio {
+                            display:none;
+                        }
+                        &.v-radio-checked {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .draw-form {
+        font-size:14px;
+        color:#333;
+        input {
+            width: 160px;
+            height: 38px;
+            border:1px solid #E5E5E5;
+            padding: 0 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            .fontNumber();
+            color:@colorG1;
+            &:focus {
+                border-color:@color_pink;
+            }
+        }
+        button {
+            display: block;
+            width: 120px;
+            .btn(38px, 16px);
+            .btn-fill();
+            line-height: 34px;
+        }
+        .form-err {
+            height: 40px;
+        }
+        .err-info {
+            width: 400px;
+            border:none;
+            font-size: 12px;
+            background: none;
+            margin-top: 5px;
+            a {
+                color:@colorG1;
+                &:hover {
+                    color:@color_pink_dark;
+                    i {
+                        color:@color_pink_dark;
+                    }
+                }
+                i {
+                    position: relative;
+                    top:-2px;
+                    left:-2px;
+                    color:@colorG1;
+                }
+            }
+        }
+    }
+    a.draw-btn {
+        display: block;
+        width: 180px;
+        padding:22px 0;
+        border:1px dashed #FFDCE5;
+        line-height: 17px;
+        text-align: center;
+        color:@color_pink_dark;
+        i {
+            line-height: 16px;
+            position: relative;
+            top:-1px;
+        }
+        &:hover {
+            border-color:@color_pink;
+        }
+    }
+
+    &.draw-confirm {
+        .draw-title {
+            padding: 5px 20px;
+            background-color: #F5F5F5;
+            h2 {
+                font-weight: lighter;
+            }
+        }
+    }
+    .text-box em {
+        .fontPrice();
+        font-size:14px;
+        font-weight: bold;
+    }
+}
+i.i-alipay {
+    color: #00A9F1;
+}

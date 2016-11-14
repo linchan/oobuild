@@ -1,0 +1,190 @@
+.shop-info {
+    .shop-year {
+        position: relative;
+        width: 180px;
+        height: 20px;
+        span {
+            position: absolute;
+            display: block;
+            left: 50px;
+            top: 0;
+            width: 80px;
+            line-height: 21px;
+            font-size: 14px;
+            height: 21px;
+            text-align: center;
+            background-color: #fff;
+            color:#D17600;
+            font-weight: bold;
+            em {
+                .fontNumber();
+                font-weight: bold;
+                font-size:16px;
+                color:@color_pink_dark;
+                vertical-align: bottom;
+            }
+        }
+        i {
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 180px;
+            left: 0;
+            top: 10px;
+            background-color: #FFE8B2;
+        }
+    }
+    .shop-content {
+        border: 1px solid #ebebeb;
+        border-top: none;
+        width: 195px;
+        padding: 0 4px 19px 19px;
+        background: #fff;
+        height: auto;
+        overflow: hidden;
+        color:@colorG2;
+        &.shop-content-top{
+            border-top: 1px solid #ebebeb;
+        }
+        h2 {
+            font-weight: 400;
+            height: 20px;
+            margin-top: 15px;
+            &.shop-name {
+                line-height: 16px;
+                color:@colorG1;
+                font-size:16px;
+            }
+        }
+        a.icon-btn {
+            .btn(28px);
+            &.care {
+                margin-top: 10px;
+                margin-right: 15px;
+                i {
+                    font-size:18px;
+                }
+                i,span {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .shop-icon {
+            margin:10px 0 10px;
+        }
+        ul {
+            li {
+                clear:both;
+                overflow: hidden;
+                color:@color_6c;
+                line-height: 26px;
+                .attr {
+                    width: 40px;
+                    float: left;
+                }
+                .text{
+                    width: 155px;
+                    float: left;
+
+                    .kf {
+                        img {
+                            position: relative;
+                            top: 2px;
+                            left: 2px;
+                        }
+                    }
+                    .guide {
+                        font-size:16px;
+                        color:@color_pink;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+                &.shop-name {
+                    position: relative;
+                    overflow:inherit;
+                    p {
+                        width: 135px;
+                        height: 24px;
+                        overflow: hidden;
+                    }
+                    img.tb {
+                        position: absolute;
+                        top:0;
+                        right:-3px;
+                    }
+                }
+                &.tel-list {
+                    margin-top: 3px;
+                    .attr {
+                        //line-height: 18px;
+                    }
+                    //.text {padding-left:38px;}
+                    p {
+                        //line-height: 18px;
+                    }
+                }
+            }
+        }
+        .btns {
+            margin-top: 12px;
+            a {
+                .btn(28px, 12px);
+                width: 83px;
+                .btn-default();
+                &.care {
+                    .btn-default();
+                }
+                &.btn-default {
+                    .btn-default();
+                }
+                &.kf {
+                    margin-right: 10px;
+                    img {
+                        position: relative;
+                        top: 2px;
+                    }
+                    img.span {
+                        vertical-align: middle;
+                    }
+                }
+                &.btn_care_shop {
+                    margin-right:15px;
+                }
+            }
+        }
+        .desc {
+            margin-top: 10px;
+            color:@colorG3;
+        }
+
+
+        .shop-status {
+            a {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                &.curr {
+                    color:@colorR1;
+                }
+            }
+        }
+    }
+    &.shop-gold {
+        .shop-gold-title {
+            border-width: 0 1px;
+            border-color:#FFD100;
+            border-style:solid;
+            display: block;
+            height: auto;
+            overflow: hidden;
+        }
+        .shop-content {
+            border-color: #FFD100;
+        }
+    }
+}
+
+.body_item3 .shop-content{
+    border-color: #fff;
+}

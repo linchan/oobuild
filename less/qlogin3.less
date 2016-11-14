@@ -1,0 +1,61 @@
+/* 引入公共的LESS function */
+@import "_function3";
+@import "_login3";
+
+.hide-flow{
+	overflow: hidden;
+}
+.w-loginbg{
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color: #000;
+	filter:alpha(opacity=30);
+	opacity: 0.3;
+	width:100%;
+	height:100%;
+	z-index: 1000000;
+	overflow: hidden;
+}
+.qlogin{
+	position: fixed;
+	top:0px;
+	left:50%;
+	width:430px;
+	margin-left:-215px;
+	*margin-left:-100px;
+	z-index: 1100000;
+	margin-top:0;
+	.login-form {
+		.btn-disable,
+		.btn-red{
+			margin-left:14px;
+		}
+	}
+
+}
+
+.login-warp {
+	height: auto;
+	overflow: hidden;
+	background-position: center top;
+	background-repeat: no-repeat;
+	margin-top:10px;
+
+}
+.qlogin .login-main .login-pannel{
+	background: none;
+	margin-top:0;
+}
+.qlogin-close{
+	float: right;
+	font-size:16px;
+	color: #9c9c9c;
+}
+
+
+
+
+

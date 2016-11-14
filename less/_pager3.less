@@ -1,0 +1,120 @@
+.pagination {
+	text-align: center;
+	padding: 30px 0 50px;
+	a,span {
+		display: inline-block;
+		padding: 0.5em 0.9em;
+		margin-right: -1px;
+		// margin-bottom: 5px;
+		background:#fff;
+		border: 1px solid #E5E5E5;
+		&.prev{
+			margin-right: 10px;
+		}
+		&.next {
+			margin-left: 10px;
+		}
+		&.prev,&.next {
+			&:hover {
+				color:@color_pink_dark;
+				border-color:@color_pink;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		color:@colorG1;
+		&:hover {
+			color:@color_pink_dark;
+		}
+	}
+	span.ellipse {
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		background-color: transparent;
+	}
+	.current {
+		background:@color_pink;
+		color:#fff;
+		border-color:@color_pink;
+		&.prev,&.next {
+			color:#9c9c9c;
+			background:#fff;
+			border-color:#E5E5E5;
+			&:hover {
+				color:#9c9c9c;
+				border-color:#E5E5E5;
+			}
+		}
+	}
+	.pager-jump {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		padding-left: 5px;
+		padding-right: 5px;
+		vertical-align: middle;
+		*vertical-align: top;
+		span.pager-text {
+			color:@color_9c;
+			background:none;
+			border:none;
+			line-height: 32px;
+			padding: 0 0.5em;
+		}
+		.pager-textbox-wrapper {
+			display: -moz-inline-stack;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			width: 35px;
+			margin-left: 2px;
+			margin-right: 2px;
+			padding: 3px 5px;
+			vertical-align: middle;
+			font-size: 0;
+			outline: none;
+			background-color: #fff;
+			border: 1px solid #d4d4d4;
+			.jump-textbox {
+				width: 35px;
+			    padding: 3px 0;
+			    text-align: center;
+			    display: inline;
+			    float: left;
+			    position: relative;
+			    height: 18px;
+			    line-height: 18px;
+			    border: 0 none;
+			    font-size: 12px;
+			    outline: medium none;
+			    vertical-align: middle;
+			    color: #333;
+			    background: #fff;
+			}
+		}
+		.jump-button {
+			display: -moz-inline-stack;
+			display: inline-block;
+			zoom: 1;
+			overflow: visible;
+			_overflow-y: hidden;
+			width: 52px;
+			height: 32px;
+			margin-left: 7px;
+			outline: none;
+			cursor: pointer;
+			font-size: 12px;
+			vertical-align: middle;
+			padding: 0 10px;
+			text-decoration: none;
+			background-color:#fff;
+			border: 1px solid #E5E5E5;
+			color: #333;
+			&:hover {
+				color:@color_pink_dark;
+				border-color:@color_pink;
+			}
+		}
+	}
+}

@@ -1,0 +1,249 @@
+.refund {
+    fieldset.o-address .item  {
+        .v-select {
+            margin-top: 8px;
+            dt {
+                width: 220px;
+            }
+            dd {
+                width: 240px;
+                li {
+                    padding: 0 10px;
+                    line-height: 24px;
+                }
+            }
+        }
+        textarea {
+            float: left;
+            margin-top: 10px;
+            width: 220px;
+            height: 80px;
+            padding: 5px 10px;
+            line-height: 20px;
+            border: 1px solid #EBEBEB;
+            resize: none;
+            &:focus {
+                border-color: #9c9c9c;
+            }
+        }
+        input {
+            width: 220px;
+            &.input-address {
+                width: 520px;
+                background-color: #F5F5F5;
+                &:focus {
+                    border-color: #EBEBEB;
+                }
+            }
+            &.hidden-input {
+                width: 0;
+                border: none;
+                padding: 0;
+            }
+            &:focus {
+                border-color: @color_9c;
+            }
+        }
+        .btn-copy {
+            margin: 7px 0 7px 10px;
+            width: 58px;
+            line-height: 30px;
+            font-size: 12px;
+        }
+        span.tips {
+            display: block;
+            float:left;
+            margin: 7px 0 7px 10px;
+            line-height: 30px;
+            strong {
+                color:@color_pink_dark;
+            }
+            a {
+                color: @colorG1;
+                &:hover {
+                    color:@color_pink_dark;
+                }
+            }
+            font.vvicon {
+                color:#FECC26;
+            }
+        }
+        &.errors {
+            span.tips {
+                display: none;
+            }
+        }
+    }
+
+    .o-box {
+        margin-bottom: 0;
+        &.refund-box {
+            border-top:none;
+        }
+    }
+}
+
+table.tb-order {
+    &.tb-refund-list {
+        thead th {
+            background-color: #fff;
+        }
+        .detail-col {
+            width: 500px;
+        }
+        .count-col {
+            width: 100px;
+        }
+        .ctrl-col {
+            width: 130px;
+            padding: 0 30px 0 20px;
+        }
+        .reason-col {
+            width:180px;
+            text-align: left;
+        }
+        .btn-col {
+            // width: 60px;
+        }
+        dl.order-item {
+            dt {
+                .sku {
+                    width: 190px;
+                }
+                &.detail-col {
+                    width: 540px;
+                }
+            }
+            dd {
+                &.count-col {
+                    line-height: 20px;
+                    font-family: "Arial" ,"Hiragino Sans GB", "Microsoft YaHei", "SimSun";
+                    em {
+                        .fontNumber();
+                    }
+                }
+                &.ctrl-col {
+                    width: 130px;
+                    padding: 20px 30px 20px 20px;
+                    .amount-stock {
+                        margin: 0 auto;
+                    }
+                }
+                &.reason-col {
+                    overflow: hidden;
+                    color:@colorG1;
+                    word-wrap : break-word ;
+                    line-height: 20px;
+                    p.tips {
+                        color:@colorG4;
+                    }
+                }
+            }
+            &.disabled {
+                background-color: #FAFAFA;
+                cursor: not-allowed;
+            }
+            .disabled-desc {
+                font {
+                    color:#FECC26;
+                }
+            }
+        }
+    }
+
+    &.tb-refund-detail {
+        .detail-col {
+        }
+        .amount-col {
+            width: auto;
+            .btn.btn-x-small {
+                width: 90px;
+            }
+            .price-info {
+                color:@colorG1;
+                em {
+                    font-weight: bold;
+                }
+            }
+        }
+        .count-col {
+            width: 90px;
+        }
+        .remark-col {
+            word-break:break-all;
+            width: 220px;
+        }
+    }
+
+
+    .v-select {
+        margin-top: 8px;
+        line-height: 21px;
+        dt {
+            width: 70px;
+            height: 20px;
+            i {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .lack-tips {
+        > i {
+            left:-6px;
+            top: 5px;
+        }
+        .lack-txt {
+            top:10px;
+            left: -125px;
+        }
+    }
+}
+
+fieldset.o-address.reason-form {
+    padding: 0;
+    .item label {
+        padding-right: 0;
+        width: 70px;
+        text-align: left;
+    }
+    .item.error {
+        line-height: 1;
+        margin-top: 5px;
+        label {
+            line-height: 1;
+            height: 14px;
+            margin: 0;
+        }
+    }
+    dl.v-select {
+        margin-top: 5px;
+        dt {
+            width: 198px;
+        }
+        dd {
+            width: 218px;
+            li {
+                padding: 0 10px;
+            }
+        }
+    }
+    textarea {
+        float: left;
+        width: 200px;
+        height: 80px;
+        line-height: 20px;
+        padding: 5px 10px;
+        resize:  none;
+        border-color:#EBEBEB;
+    }
+    span.tips {
+        display: block;
+        float: left;
+        padding-left: 5px;
+        width: 40px;
+        line-height: 44px;
+        color:@colorG4;
+    }
+}
+

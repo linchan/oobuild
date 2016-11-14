@@ -1,0 +1,256 @@
+//搜索列表：推荐广告
+
+.data-split {
+    position: absolute;
+}
+
+.tips {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: 14px;
+    color: @colorG1;
+    background-color: #fafafa;
+    a {
+        font-size: 12px;
+        font-weight: normal;
+        margin: 10px;
+        color: @colorG2;
+    }
+}
+
+
+// 找同款
+.item-goods {
+    border: 1px solid @color_e5;
+    height: 130px;
+    padding: 10px;
+    .pic {
+        width: 130px;
+        height: 130px;
+        text-align: center;
+        overflow: hidden;
+        img {
+            max-width: 130px;
+            max-height: 130px;
+        }
+    }
+    .desc {
+        width: 550px;
+        padding-left: 20px;
+        line-height: 1;
+        .title {
+            font-size: 14px;
+            a {
+                color: @colorG1;
+                &:hover {
+                    color: @color_pink_dark;
+                }
+            }
+        }
+        .price {
+            padding: 15px 0;
+            font-size: 18px;
+            color: @color_pink_dark;
+            font-weight: bold;
+            .fontPrice();
+            span.yuan {
+                font-weight: lighter;
+                margin-right: 3px;
+            }
+        }
+        .info {
+            a {
+                display: block;
+                float: left;
+                font-size: 14px;
+            }
+            .info-shop {
+                padding-right: 5px;
+            }
+            .info-ww {
+                position: relative;
+                top:-2px;
+            }
+            .shop-icon {
+                margin-left: 10px;
+                padding-left: 10px;
+                height: 15px;
+                border-left: 1px solid @color_e5;
+            }
+        }
+        a.upload {
+            display: block;
+            width: 84px;
+            .btn(28px, 12px);
+            .btn-default();
+            border-color:@color_pink;
+            color:@color_pink_dark;
+            &:hover {
+                background-color: @color_pink;
+                color:#fff;
+            }
+        }
+    }
+
+}
+
+.side-list-box {
+    margin-top: 10px;
+    h2 {
+        color:#333;
+        font-size: 16px;
+        margin: 0 0 10px;
+        font-weight: normal;
+    }
+}
+
+.side-list {
+    width: 220px;
+    li {
+        width: 220px;
+        z-index: 10;
+        margin-bottom: 10px;
+        border: 1px solid #f5f5f5;
+        position: relative;
+        background: #fff;
+        .isRecommd {
+            top: 0;
+            left: 0;
+            z-index: 999;
+
+            position: absolute;
+            .icon-icon3-tag_tuijian();
+        }
+        .more-info {
+            background-color: #fff;
+        }
+        &:hover,&.hover {
+            z-index: 99;
+        }
+        a {
+            display: block;
+        }
+        .pic {
+            height: 330px;
+            //.bgnone();
+            text-align: center;
+            overflow: hidden;
+
+            //&:hover{
+            //    img {
+            //        .transform(scale(1.03));
+            //    }
+            //}
+            //img {
+            //    .transition( all .4s ease-out);
+            //}
+
+            img {
+                max-height: 100%;
+            }
+        }
+        .ico_item_active{
+            margin: 10px 0 0 5px;
+            .icon-icon3-tag_tehui();
+            display: none;
+        }
+        .ico_item_active_1{
+            display: inline;
+        }
+        .price {
+            float: left;
+            padding-left: 10px;
+            //width: 88px;
+            height: 38px;
+            line-height: 38px;
+            color: @color_pink_dark;
+            overflow: hidden;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            .fontPrice();
+            span.yuan {
+                margin-right: 3px;
+                font-family: arial;
+                font-weight: normal;
+            }
+        }
+        .pos {
+            float: right;
+            width: 85px;
+            text-align: right;
+            padding-right: 10px;
+            height: 38px;
+            line-height: 38px;
+            > a {
+                width: 85px;
+                height: 19px;
+                line-height: 19px;
+                white-space: nowrap;
+                overflow: hidden;
+                vertical-align: middle;
+                text-overflow: ellipsis;
+                color:#333;
+                margin-top: 10px;
+                img {
+                    vertical-align: middle;
+                    margin-right: 3px;
+                }
+            }
+            .triangle {
+                left:50px;
+            }
+            .triangle-up1 {
+                top:34px;
+            }
+            .triangle-up2 {
+                top:35px;
+            }
+            .more-info {
+                padding: 5px 10px 10px;
+                width: 200px;
+                left:-126px;
+                top: 38px;
+                text-align: left;
+                line-height: 26px;
+                .shop-pos {
+                    margin:0;
+                }
+            }
+        }
+
+        //商品详情页 : 相关商品
+        &.small {
+
+            width: 166px;
+
+            .pic {
+
+
+                width: 166px;
+                height: 250px;
+            }
+            .price {
+                text-align: center;
+                width: 166px;
+                font-size:16px;
+                padding-left: 0;
+            }
+        }
+        &:hover {
+            z-index:11;
+        }
+        &.hover {
+            z-index:11;
+            .pos {
+                .more-info,.triangle {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+}
+

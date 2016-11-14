@@ -1,0 +1,83 @@
+.bill-main {
+	.main-bar {
+		.fr {
+			width: 300px;
+			text-align: right;
+			line-height: 26px;
+			color: @colorG1;
+			.yuan {
+				color:@color_pink_dark;
+				margin-right: 2px;
+			}
+			em {
+				color:@color_pink_dark;
+				font-weight: bold;
+				.fontPrice();
+			}
+		}
+	}
+	.screen {
+		.nav-category {
+			.nc-key {
+				width: 60px;
+			}
+		}
+	}
+}
+
+// table list
+.bill-list {
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border:1px solid #EBEBEB;
+		td,th {
+			padding: 20px;
+			border:none;
+		}
+		thead {
+			th {
+				padding: 10px 20px;
+				background-color: #F5F5F5;
+				color:@colorG1;
+			}
+		}
+		tbody {
+			tr {
+				&.even {
+					background-color: #FAFAFA
+				}
+				td {
+
+				}
+			}
+		}
+		em {
+			.fontNumber();
+			&.price {
+				.fontPrice();
+				font-weight: bold;
+			}
+		}
+		.col-date {
+			color:@colorG1;
+			p.date-hm {
+				color:@color_6c;
+			}
+		}
+		.col-info {
+			color:@colorG1;
+			p.info-desc {
+				color:@color_9c;
+			}
+		}
+	}
+	.fail-reason {
+		height: 20px;
+		width: 80px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		cursor: default;
+	}
+}

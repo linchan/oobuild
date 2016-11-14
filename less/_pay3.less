@@ -1,0 +1,239 @@
+body {
+    background-color: #fff;
+}
+
+.pay3 {
+    padding: 10px 0 0;
+    color: #333;
+    .top {
+        padding: 16px 40px 20px 20px;
+        margin: 0 0 20px;
+        border: 1px solid #ebebeb;
+
+        .title {
+            font-size: 16px;
+        }
+        .text {
+            font-size: 12px;
+            color: @color_6c;
+        }
+        .fr {
+            //padding: 10px 0 0 0;
+            line-height: 20px;
+            font-size: 14px;
+        }
+        .red {
+            font-size: 20px;
+            color: @color_pink_dark;
+        }
+        .price {
+            .fontPrice();
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .orders-list {
+        margin: 0 0 28px;
+        border: 1px solid #ebebeb;
+        border-top: none;
+        background-color: #f9f9f9;
+
+        .citem {
+            padding: 18px 20px 18px 20px;
+            border-top: 1px solid #EBEBEB;
+            h2 {
+                margin: 0 0 9px;
+                font-size: 14px;
+                font-weight: normal;
+            }
+            p {
+                color: #999;
+            }
+            b {
+                color: #333;
+                font-weight: normal;
+            }
+            .num {
+                .fontNumber();
+            }
+        }
+
+    }
+
+    .pay-types {
+        h2 {
+            font-size: 16px;
+            margin: 0 0 5px;
+            font-weight: normal;
+        }
+
+        table.pay-list {
+            border: 1px solid #E5E5E5;
+            border-collapse: collapse;
+            margin: 0 0 30px;
+            width: 1188px;
+            .citem {
+                position: relative;
+                width: 1148px;
+                left: -1px;
+                top: -1px;
+                overflow: hidden;
+                height: 60px;
+                border:1px solid #E5E5E5;
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 16px;
+                .pay-balance-amount {
+                    color:@colorG1;
+                    .yuan {
+                        margin-right: 3px;
+                    }
+                    em {
+                        .fontPrice();
+                        font-weight: bold;
+                    }
+                }
+                &.selected {
+                    border-color: #FFDCE5;
+                    td {
+                        background-color: #FFF2F5;
+                    }
+                    .unchecked {
+                        display: none;
+                    }
+                    .checked {
+                        display: inline;
+                    }
+                }
+                &.disabled {
+                    cursor: not-allowed;
+                    color:@colorG4;
+                    &.pay-balance .pay-type-icon {
+                        color: @colorG4;
+                    }
+                    .unchecked {
+                        color:#F5F5F5;
+                    }
+                    .pay-balance-amount {
+                        color:@colorG4;
+                    }
+                }
+                .radio {
+                    font-size: 14px;
+                    color: @color_pink;
+                }
+                .unchecked {
+                    display: inline;
+                    color:#E5E5E5;
+                }
+                .checked {
+                    display: none;
+                }
+                &.pay-balance .pay-type-icon {
+                    color: #FF7A6E;
+                }
+                &.pay-alipay .pay-type-icon {
+                    color: #00A9F1;
+                }
+            }
+        }
+        .btn-pay {
+            width: 180px;
+            .btn(40px, 16px);
+            .btn-fill();
+        }
+    }
+
+    .form-main {
+        .f-wrap {
+            border: none;
+            margin-bottom: 0;
+        }
+        dl.text-box dt {
+            width: 90px;
+        }
+    }
+}
+
+.pay3_box {
+    padding: 0 0 70px;
+    border: 1px solid #EBEBEB;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+    .vvicon {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        font-size: 50px;
+        border-radius: 45px;
+        margin: 50px 0 30px;
+        color: #5ABF3B;
+        background-color: #F5F5F5;
+        &.warning {
+            color:#FFB500;
+        }
+        &.error {
+            color:@color_pink;
+        }
+    }
+    h2 {
+        margin: 0 0 25px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        p{
+            color: #333;
+        }
+        .yuan, .price {
+            color: @color_pink_dark;
+        }
+        .yuan {
+            font-family: Arial;
+        }
+        .price {
+            .fontPrice();
+            font-weight: bold;
+        }
+    }
+    p {
+        color: @color_9c;
+    }
+    .btn_return {
+        width: 160px;
+        .btn(40px, 14px);
+        .btn-default();
+        right: 3px;
+    }
+    .btn_repay{
+        width: 160px;
+        .btn(40px, 14px);
+        .btn-fill();
+        left: 3px;
+    }
+
+    .btn_repay,.btn_return{
+        margin: 30px auto 0;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+}
+
+.pay_fail {
+    h2 {
+        text-align: left;
+        padding-left: 443px;
+    }
+    .yuan, .price {
+        color: #333;
+    }
+    .btn_return{
+        width: 160px;
+    }
+    .desc{
+        padding-left: 443px;
+        text-align: left;
+    }
+}

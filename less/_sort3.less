@@ -1,0 +1,130 @@
+.goods-sort {
+
+    margin: 10px 0 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ebebeb;
+    .pro-sort {
+        overflow: hidden;
+        .s-b-left {
+            float: left;
+
+            ul {
+                overflow: hidden;
+                .h-item {
+                    float: left;
+                    width: 90px;
+                    line-height: 40px;
+                    text-align: center;
+                    cursor: pointer;
+                    &.curr {
+                        span,i{
+                            color: #ef3664;
+                        }
+
+                        background: #fff;
+                        &.time {
+                            width: 100px;
+                        }
+
+                    }
+                    span {
+                        color: #333;
+                        vertical-align: middle;
+                    }
+                    &.desc {
+                        .sort-down {
+                            visibility: visible;
+                            display: inline;
+                        }
+                        .sort-up{
+                            display: none;
+                        }
+                    }
+                    &.asc {
+                        .sort-up {
+                            visibility: visible;
+                            display: inline;
+                        }
+                        .sort-down{
+                            display: none;
+                        }
+                    }
+                    .vvicon {
+                        vertical-align: middle;
+                        font-size: 14px;
+                        visibility: hidden;
+                    }
+                    .sort-up {
+                        display: none;
+                    }
+                }
+                .item {
+                    float: left;
+                    width: 80px;
+                    line-height: 38px;
+                    text-align: center;
+                    &.time {
+                        width: 98px;
+                        &.curr {
+                            width: 100px;
+                        }
+                    }
+                    &.price {
+                        height: 40px;
+                        padding: 0 5px 0 0;
+                        width: auto;
+                        border-right: none;
+                        .line {
+                            width: 5px;
+                            height: 1px;
+                            margin-top: 21px;
+                            background-color: @color_9c;
+                            overflow: hidden;
+                        }
+                        .price-box {
+                            margin: 7px 5px 0;
+                            width: 70px;
+                            height: 26px;
+                            border: 1px solid #ddd;
+                            padding-left: 10px;
+                            line-height: 2;
+                            background-color: #fff;
+                            overflow: hidden;
+                            &:focus{
+                                border-color: @color_pink;
+                            }
+                            em {
+                                color: @color_9c;
+                            }
+                            .input_bak {
+                                width: 62px;
+                                height: 26px;
+                                line-height: 26px;
+                                border: none;
+                                border-width: 0;
+                                color: #333;
+                            }
+                            &.ml {
+                                margin-left: 10px;
+                            }
+                        }
+                        .btn {
+                            .btn(26px);
+                            .btn-fill();
+                            float: left;
+                            margin: 7px 0 0;
+                            padding: 0 12px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .s-b-right{
+            line-height: 40px;
+            padding-right: 12px;
+            float: right;
+        }
+    }
+}

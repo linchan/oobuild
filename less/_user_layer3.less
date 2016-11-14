@@ -1,0 +1,174 @@
+// user common
+// by cjl 20160622
+
+body.body_user3 {
+	background-color:#fff;
+	.header_shop {
+		border-bottom: 1px solid #E5E5E5;
+	}
+}
+
+
+.user-w {
+	margin-top: 30px;
+	position: relative;
+}
+/*左侧内容*/
+.user-left {
+	position: absolute;
+    width:178px;
+    float:left;
+    padding-bottom:20px;
+    left:1px;
+	top:1px;
+}
+
+.user-main {
+	border-left:180px solid #F5F5F5;
+	padding-left: 20px;
+	width: 990px;
+	min-height: 400px;
+	_height:400px;
+	.main-wrap {
+		.main-title {
+			color:@colorG1;
+			font-size:18px;
+			line-height: 1;
+			height: 30px;
+		}
+	}
+}
+
+
+
+.user-menu {
+	dl {
+		width: 178px;
+		text-align: center;
+		border-bottom:1px solid #EBEBEB;
+		a {
+			display: block;
+			span {
+				display: block;
+				padding-left: 40px;
+				text-align: left;
+			}
+		}
+		dt {
+			position: relative;
+			height: 39px;
+			line-height: 40px;
+			a {
+				display: block;
+				font-size:14px;
+				color:@colorG1;
+				&.curr,&:hover {
+					color:@color_pink_dark;
+				}
+			}
+			i {
+				display: block;
+				position: absolute;
+				float: right;
+				height: 39px;
+				font-size:16px;
+				color:#9B9B9B;
+				right:30px;
+				top:1px;
+			}
+		}
+		dd {
+			padding-bottom: 5px;
+			a {
+				line-height: 34px;
+				color:@color_6c;
+				&.curr,&:hover {
+					color:@color_pink_dark;
+				}
+			}
+		}
+		&.curr {
+			background-color: #fff;
+			dt {
+				a,i {
+					color:@color_pink_dark;
+				}
+			}
+			&.big {
+				dt {
+					a {
+						color:@colorG1;
+					}
+					i {
+						color:#9B9B9B;
+					}
+				}
+			}
+		}
+		&:hover,&.hover {
+			dt {
+				a,i {
+					color:@color_pink_dark;
+				}
+			}
+			&.big {
+				dt {
+					a {
+						color:@colorG1;
+					}
+					i {
+						color:#9B9B9B;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+.header-shop-info {
+	margin-top: 5px;
+	width: 300px;
+	text-align: right;
+	.shop-name {
+		margin-top: 3px;
+		padding-right: 10px;
+		font-size: 14px;
+		color:@colorG1;
+	}
+	a.btn-change {
+		position: relative;
+		width: 45px;
+		display: block;
+		margin-top: 8px;
+		z-index: 70;
+		ul {
+			background-color: #fff;
+			position: absolute;
+			display: none;
+			right: -1px;
+			top:22px;
+			border:1px solid #E5E5E5;
+			z-index: 70;
+			li {
+				width: auto;
+				line-height: 35px;
+				padding:0 15px;
+				color:@colorG1;
+				&:hover {
+					color:@color_pink_dark;
+				}
+				&.curr {
+					color:@color_pink_dark;
+				}
+			}
+		}
+		&:hover {
+			z-index: 71;
+			ul {
+				display: block;
+			}
+		}
+	}
+}

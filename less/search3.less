@@ -1,0 +1,120 @@
+/* 引入基础的重置样式表 */
+@import "_reset3";
+/* 引入公共ICONS */
+@import "sp/icon3";
+/* 引入公共的LESS function */
+@import "_function3";
+@import "_goods3";
+/* 引入分页样式表 */
+@import "_pager3";
+/* 引入筛选器的样式表 */
+@import "_screen3";
+@import "_sort3";
+/* 引入3.0头尾部样式表 */
+@import "_common3";
+/* 引入侧边精准广告的样式表 */
+@import "_list3";
+@import "_shop_info3";
+
+/* 头部广告列表样式 */
+@import '_adv_list3';
+
+body {
+    background-color: #fff;
+}
+
+.search-main {
+    width: 950px;
+}
+
+.side-list-box {
+    margin-top: 38px;
+}
+
+.search_noresult_ads {
+    .top_tip {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin: 20px 0;
+        color: @color_6c;
+        border: 1px solid #fde287;
+        background: #fef9e9;
+    }
+    .side-list {
+        width: auto;
+        margin-left: -20px;
+        li {
+            width: 220px;
+            float: left;
+            margin: 0 0 20px 20px;
+        }
+    }
+}
+
+.search_noresult_ads, .side-list-box {
+    .cert, .miao {
+        display: none;
+    }
+    .cert_1, .miao_1 {
+        display: block;
+    }
+}
+.search-content{
+    .up_time{
+        display: none;
+    }
+    .sales{
+        color: @color_9c;
+        display: block;
+    }
+    &.up_time_shown{
+        .up_time{
+            color: @color_9c;
+            display: block;
+        }
+        .sales{
+            display: none;
+        }
+    }
+}
+.pagination{}
+.con-detail {
+
+   h2.title{
+       height: 39px;
+       line-height: 39px;
+       font-size: 16px;
+       background-color: #fff;
+       color: #333;
+       font-weight: lighter;
+   }
+}
+.con-list {
+    margin: 5px 0 20px -10px;
+    height: auto;
+    .side-list{
+        width: auto;
+    }
+    .side-list li {
+        width: 228px;
+        height: 385px;
+        margin: 0 0 0 10px;
+        float: left;
+        .pic{
+            height: 345px;
+        }
+        .price {
+            width: 80px;
+            font-size: 16px;
+        }
+        .pos {
+            width: 85px;
+            .more-info{
+                left: -134px;
+                width: 208px;
+            }
+        }
+    }
+}
+
