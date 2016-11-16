@@ -24,7 +24,8 @@ var gulp = require('gulp'),
 var _versonConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'verson.json')));
 var VERSON = _versonConfig.verson;
 var build_path = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-frontend/statics/build/v3';
-var push_path = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-control/src/main/webapp';
+// var push_path = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-control/src/main/webapp';
+var push_path = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-frontend/statics/v3';
 var paths = {
     less: 'less/*.less',
     css: '../../v3/css/*.css',
@@ -33,14 +34,14 @@ var paths = {
     img: 'img',
     dist: 'js/dist/*.js',
     optimize: 'js/src',
-    template: 'template/view/**/**/*.jsp'
+    template: path.join(build_path, 'template/view/**/**/*.jsp')
 };
 
 
 //压缩合并css, css中既有自己写的.less, 也有引入第三方库的.css
-var _time_less
+var _time_less;
 gulp.task('lessmin', function (done) {
-    if(_item_less){
+    if(_time_less){
         clearTimeout(_time_less)
     }
     _time_less = setTimeout(function(){
@@ -105,7 +106,7 @@ gulp.task('watch', function (done) {
     gulp.watch(paths.script, ['build-js']);
     gulp.watch(path.join(build_path, paths.sprite + '/**/*.png'), ['sprite']);
     gulp.watch(path.join(build_path, paths.less), ['lessmin']);
-    gulp.watch(path.join(build_path, paths.template), function(event, a){
+    gulp.watch(paths.template, function(event, a){
         var _file = event.path;
         var _fileName = _file.split('template\\view\\')[1];
         var _dir = '';
@@ -144,9 +145,8 @@ gulp.task('template', function() {
         clearTimeout(_time_template)
     }
     _time_template = setTimeout(function() {
-        gulp.src(path.join(build_path,paths.template))
+        gulp.src(paths.template)
             .pipe(gulp.dest(path.join(push_path, 'WEB-INF', 'view')))
-            // .pipe(gulp.dest(path.join(push_target_path, _dir)))
             .on('end', function() {
                 console.log('copy files');
             })

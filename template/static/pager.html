@@ -1,0 +1,9 @@
+
+<div class="oni-pager"><span ms-class="oni-state-disabled:currentPage==1" ms-if="isShowPrev()" ms-attr-title="getTitle('prev')" ms-click="jumpPage($event,'prev')" ms-text="prevText" class="oni-pager-prev"></span><span ms-visible="firstPage!==1" ms-attr-title="getTitle('first', currentPage)" ms-click="jumpPage($event,'first')" ms-class-oni-state-active="currentPage == 1" ms-hover="oni-state-hover" class="oni-pager-item">1</span><span ms-if="showFirstOmit" ms-text="ellipseText" class="oni-pager-omit"></span><span ms-repeat="pages" ms-attr-title="getTitle(el, currentPage)" ms-hover="oni-state-hover" ms-click="jumpPage($event,el)" ms-class-oni-state-active="el == currentPage" ms-text="el" class="oni-pager-item"></span><span ms-if="showLastOmit" ms-text="ellipseText" class="oni-pager-omit"></span><span ms-visible="lastPage!==totalPages" ms-attr-title="getTitle('last', currentPage, totalPages)" ms-hover="oni-state-hover" ms-click="jumpPage($event,'last')" ms-text="totalPages" class="oni-pager-item"></span><span ms-if="isShowNext()" ms-attr-title="getTitle('next')" ms-click="jumpPage($event,'next')" ms-class="oni-state-disabled:currentPage==totalPages" ms-text="nextText" class="oni-pager-next"></span>
+  <div ms-if="showJumper" class="oni-pager-jump"><span ms-html="_getTotalPages(totalPages)" class="oni-pager-text"></span>
+    <div class="oni-pager-textbox-wrapper">
+      <input ms-duplex="_currentPage" data-duplex-event="change" ms-keyup="changeCurrentPage" class="oni-pager-textbox"/>
+    </div><span class="oni-pager-text">{{regional.pageText}}</span>
+    <button ms-click="changeCurrentPage" class="oni-pager-button">{{regional.confirmText}}</button>
+  </div>
+</div>

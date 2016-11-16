@@ -1,0 +1,28 @@
+
+<div ms-on-drop="onDrop" ms-on-dragover="onDragOver" class="oni-fileuploader-wrapper">
+  <div ms-repeat="previews" class="preview-image-wrapper">
+    <div class="preview-menu"><img ms-if-loop="el.imgUrlPre" ms-attr-src="el.imgUrlPre + el.preview" alt=""/><img ms-if-loop="!el.imgUrlPre" ms-attr-src="el.preview" alt=""/>
+      <div class="preview-progress-wrapper">
+        <div ms-if="showProgress" class="preview-progress-body">
+          <div class="progress-bg"></div>
+          <div ms-css-width="{{el.uploadProgress}}%" class="progress-bar"></div><span class="message">{{el.message}}</span>
+        </div>
+      </div>
+    </div>
+    <div><a ms-attr-data-src="el.preview" ms-on-click="onPreviewRemoveClicked(el)" ms-attr-id="el.fileLocalToken" class="del-file oni-icon icon">删除</a></div>
+  </div>
+  <button type="button" ms-click="addFileClicked" ms-if="previews.size()&lt;maxFile" class="uploader-button-add uploader-button">{{addButtonText}}
+    <input type="file" ms-if="useHtml5Runtime" ms-attr-accept="getInputAcceptTypes(false)" ms-attr-multiple="multipleFileAllowed" style="display:none"/>
+  </button>
+  <div ms-if="useFlashRuntime" class="flash-wrapper">
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" align="middle" height="100%" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" id="##VM_ID##_flash"></object>
+    <param name="allowScriptAccess" value="sameDomain"/>
+    <param name="scaleMode" value="exactFit"/>
+    <param name="bgcolor" value=""/>
+    <param name="wmode" value="transparent"/>
+    <param name="allowFullScreen" value="false"/>
+    <param name="movie" value="http://src.vvic.com/statics/assets/fileuploader.swf?vmid=##VM_ID##"/>
+    <param name="quality" value="high"/>
+    <embed src="http://src.vvic.com/statics/assets/fileuploader.swf?vmid=##VM_ID##" type="application/x-shockwave-flash" align="middle" width="100%" scalemode="exactFit" wmode="transparent" height="100%" quality="high" pluginspage="http://www.adobe.com/go/getflashplayer_cn" allowscriptaccess="sameDomain" allowfullscreen="false" name="##VM_ID##_flash"/>
+  </div>
+</div>
