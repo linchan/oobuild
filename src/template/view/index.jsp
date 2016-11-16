@@ -1,7 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <jsp:include page="common/header.jsp">
-    <jsp:param name="cssName" value="index3"/>
-    <jsp:param name="cssHash" value="${cssHash.index3}"/>
+    <jsp:param name="cssName" value="index3.css"/>
     <jsp:param name="title" value=""/>
     <jsp:param name="keywords" value="网店货源,淘宝货源,服装批发,网批,广州服装批发,沙河,一键上传,一件代发,VVIC 搜款网"/>
     <jsp:param name="desc" value="VVIC 搜款网是广州最大的网批平台，覆盖沙河、十三行、白马、解放南等批发市场，提供一键上传、一件代发等功能。找网店货源、淘宝货源，搜款就上搜款网。"/>
@@ -353,7 +352,7 @@
 
                     <a href="/shop/${item.shop_id}" vda="dkmc|hotcard|0|${item.shop_id}|0|${state.count}" target="_blank" class="name" title="${item.shop_name}">
                        <c:if test="${item.is_gold_shop == 1}">
-                       <img src="${staticDomain}/statics/v2/css/img/common/gold.png" aglin="absmiddle" width="19">
+                       <img src="${staticDomain}/dist/css/img/common/gold.png" aglin="absmiddle" width="19">
                        </c:if>
                         ${item.shop_name}
                     </a>
@@ -400,7 +399,7 @@
     <c:forEach items="${homeFloorAdList}" var="floor" varStatus="state">
         <div class="floor_item">
             <div class="title clearfix">
-                <img class="title-number" src="${staticDomain}/statics/v2/css/img/common/floor${state.count}.png" alt="">
+                <img class="title-number" src="${staticDomain}/dist/css/img/common/floor${state.count}.png" alt="">
 
                 <span>${floor.floorTitle}</span>
             </div>
@@ -451,7 +450,7 @@
                                     </c:choose>
                                     <a href="/shop/${item.shop_id}" target="_blank" vda="dkmc|mixcard|0|${item.shop_id}|${floor.floor}|${itemState.count}" class="name j-vda">
                                         <c:if test="${item.is_gold_shop == 1}">
-                                        <img src="${staticDomain}/statics/v2/css/img/common/gold.png" aglin="absmiddle" width="19">
+                                        <img src="${staticDomain}/dist/css/img/common/gold.png" aglin="absmiddle" width="19">
                                         </c:if>
                                         ${item.shop_name}
                                     </a>
@@ -483,7 +482,7 @@
 
 <div class="banner_120">
     <a href="/tools.html" class="j-vda" vda="tp|brands|0|0|0|0" target="_blank">
-        <img data-original="${staticDomain}/statics/v2/css/img/common/banner_1920_120.jpg" class="lazy" src="" alt="">
+        <img data-original="${staticDomain}/dist/css/img/common/banner_1920_120.jpg" class="lazy" src="" alt="">
     </a>
 </div>
 
@@ -498,10 +497,6 @@
 <script>
     var HOTITEMS = ${hot_items_var};
     var SHOPVIPS = ${shop_vvips_var};
-    require(['web3/index3'], function () {
-    });
 </script>
-<jsp:include page="common/third.jsp"/>
-
-
+<jsp:
 </body></html>

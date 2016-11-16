@@ -2,8 +2,7 @@
 <jsp:include page="common/header.jsp">
     <jsp:param name="headerName" value="shop"/>
     <jsp:param name="hideNav" value="1"/>
-    <jsp:param name="cssName" value="item3"/>
-    <jsp:param name="cssHash" value="${cssHash.item3}"/>
+    <jsp:param name="cssName" value="item3.css"/>
     <jsp:param name="title" value="${item.title} - 商品详情 -"/>
     <jsp:param name="keywords" value="${item.title},${shop.tcname},${shop.pname},${shop.marketName},${shop.name},VVIC 搜款网"/>
     <jsp:param name="desc" value="${item.title}，由 ${shop.marketName} ${shop.name} 档口发布在 VVIC 搜款网，属于 ${shop.pname} ${shop.tcname}类目。VVIC 搜款网是广州最大的网批平台，提供一键上传、一件代发等功能。找网店货源、淘宝货源，搜款就上搜款网。
@@ -245,7 +244,7 @@
                                         <c:when test="${item.art_no==''}">
                                             档口未提供货号的商品无法下单
                                         </c:when>
-                                       
+
                                     </c:choose>
                                 </c:otherwise>
                             </c:choose>

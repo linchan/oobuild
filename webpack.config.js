@@ -5,7 +5,7 @@ var fs = require('fs');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 var srcDir = path.resolve(process.cwd(), 'src');
-
+var libDir = srcDir + '/js/lib';
 //获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
     var jsPath = path.resolve(srcDir, 'js');
@@ -13,19 +13,21 @@ function getEntry() {
     var matchs = [], files = {};
     dirs.forEach(function (item) {
         matchs = item.match(/(.+)\.js$/);
-        // console.log(matchs);
+        console.log(matchs);
         if (matchs) {
             files[matchs[1]] = path.resolve(srcDir, 'js', item);
         }
     });
-    // console.log(JSON.stringify(files));
+    console.log(JSON.stringify(files));
     return files;
 }
 
 module.exports = {
     cache: true,
     devtool: "source-map",
-    entry: getEntry(),
+    entry: {
+        index: path.join(__dirname, 'src/js/index.js')
+    },
     output: {
         path: path.join(__dirname, "dist/js/"),
         publicPath: "dist/js/",
@@ -34,9 +36,12 @@ module.exports = {
     },
     resolve: {
         alias: {
-            jquery: srcDir + "/js/lib/jquery.min.js",
-            core: srcDir + "/js/core",
-            ui: srcDir + "/js/ui"
+            jquery: libDir + "/jquery/jquery.min",
+            underscore: libDir + '/underscore/underscore-min',
+            lazyload: libDir + '/jquery.lazyload/jquery.lazyload.min',
+            slide: libDir + '/jquery.slide/jquery.SuperSlide.2.1.1',
+            pagination: libDir + '/jquery.pagination/jquery.pagination.min',
+            cookie: libDir + '/jquery.cookie/jquery.cookie.min'
         }
     },
     plugins: [
