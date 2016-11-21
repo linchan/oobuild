@@ -1,4 +1,4 @@
-webpackJsonp([0],[]);
+webpackJsonp([0],[])
 /*
 //@ sourceMappingURL=index.js.map
 */

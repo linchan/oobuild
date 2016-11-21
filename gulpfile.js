@@ -173,11 +173,11 @@ gulp.task('template', function() {
         clearTimeout(_time_template)
     }
     _time_template = setTimeout(function() {
-        gulp.src(paths.template)
-            .pipe(gulp.dest(path.join(templatePath, 'WEB-INF/view')))
-            .on('end', function() {
-                console.log('copy files');
-            })
+        // gulp.src(paths.template)
+        //     .pipe(gulp.dest(path.join(templatePath, 'WEB-INF/view')))
+        //     .on('end', function() {
+        //         console.log('copy files');
+        //     })
     }, 400);
 });
 

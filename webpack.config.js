@@ -13,7 +13,7 @@ function getEntry() {
     var matchs = [], files = {};
     dirs.forEach(function (item) {
         matchs = item.match(/(.+)\.js$/);
-        console.log(matchs);
+        // console.log(matchs);
         if (matchs) {
             files[matchs[1]] = path.resolve(srcDir, 'js', item);
         }
@@ -25,31 +25,50 @@ function getEntry() {
 module.exports = {
     cache: true,
     devtool: "source-map",
-    entry: {
-        index: path.join(__dirname, 'src/js/index.js')
-    },
+    entry: getEntry(),
     output: {
         path: path.join(__dirname, "dist/js/"),
         publicPath: "dist/js/",
-        filename: "[name].js",
-        chunkFilename: "[chunkhash].js"
+        filename: "[name].bundle.js"
     },
     resolve: {
         alias: {
             jquery: libDir + "/jquery/jquery.min",
+            layer: libDir + '/jquery.layer/layer.min',
             underscore: libDir + '/underscore/underscore-min',
             lazyload: libDir + '/jquery.lazyload/jquery.lazyload.min',
+            validation: libDir + '/jquery.validation/jquery.validation.min',
+            clipboard: libDir + '/clipboard/clipboard.min',
             slide: libDir + '/jquery.slide/jquery.SuperSlide.2.1.1',
             pagination: libDir + '/jquery.pagination/jquery.pagination.min',
-            cookie: libDir + '/jquery.cookie/jquery.cookie.min'
+            scrolltofixed: libDir + '/jquery.scrolltofixed/jquery.scrolltofixed.min',
+            datepick: libDir + '/datepick/jquery.datepicker',
+            cookie: libDir + '/jquery.cookie/jquery.cookie.min',
+            common: srcDir + '/js/common'
         }
     },
-    plugins: [
-        new CommonsChunkPlugin('common.js'),
-        new uglifyJsPlugin({
-            compress: {
-                warnings: false
+    externals: {
+        jquery: 'jQuery'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.html$/,
+                loader: 'html'
             }
-        })
+        ]
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
+        new CommonsChunkPlugin('common.js'),
+        // new uglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
     ]
 };
