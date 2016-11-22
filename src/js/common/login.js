@@ -1,8 +1,7 @@
 var api = require('common/api')
-var tpl = require('html!../../quicklogin.html')
+// var tpl = require('text!' + _WEB_Cfg.domain +'/static/quicklogin.html')
+// var css = require('css!'+_WEB_Cfg.staticPath + '/css/qlogin3.css')
 require('layer')
-// require(_WEB_Cfg.staticPath + '/css/qlogin3.css')
-
 
 
 	var SMSDELAY = 100; //短信重发间隔
@@ -42,6 +41,16 @@ require('layer')
 		showLoginBox:function(){
 			var self = this;
 			self.closeLoginBox();
+			$.ajax({
+				url: _WEB_Cfg.domain +'/static/quicklogin.html',
+				type: 'get',
+				dataType: 'html',
+				success: function(data){
+					console.log(data);
+				}
+			})
+
+
 			$(document.body).append(tpl);
 			self.setPositionLoginBox();
 			$('.qlogin').show();

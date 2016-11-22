@@ -1,14 +1,11 @@
-var $ = require('jquery');
-// var header = require('common/header');
-// var web = require('common/web');
-// var api = require('common/api');
+var header = require('common/header');
+var web = require('common/web');
+var api = require('common/api');
 var slide = require('slide');
 var cookie = require('cookie');
 var lazyload = require('lazyload');
 var pagination = require('pagination');
 var common = require('common/web');
-var _ = require('underscore');
-
 _.templateSettings = {
     evaluate: /\{\{(.+?)\}\}/g,
     interpolate: /\{\{=(.+?)\}\}/g,
@@ -38,7 +35,7 @@ var maps = {
                 $content.find('.data-split').eq(currentPage).addClass('showed').fadeIn(500)
             }
             $content.find('.data-split').eq(currentPage).find('.ishide').removeClass('ishide')
-            cuvvic.sendShow($content);
+            //cuvvic.sendShow($content);
         }
     },
     // 实力档口 110002
@@ -65,7 +62,7 @@ var maps = {
             var inWindows = checkPosition($content)
             if(inWindows){
                 $currContent.find('.ishide').removeClass('ishide')
-                cuvvic.sendShow($content)
+                //cuvvic.sendShow($content)
             }
         }
     },
@@ -89,7 +86,7 @@ var maps = {
             //console.log(inWindows);
             if(inWindows){
                 $content.find('.data-split.showed').find('.ishide').removeClass('ishide')
-                cuvvic.sendShow($content)
+                //cuvvic.sendShow($content)
             }
         }
     },
@@ -157,7 +154,7 @@ var maps = {
                     })
                 }, 30 + r * 100)
             })
-            cuvvic.sendShow(self.content);
+            //cuvvic.sendShow(self.content);
         }
     }
 }
@@ -446,7 +443,7 @@ var Main = (function () {
                 }
                 var $a = $nav_item.find('.nav_expend_ad a');
                 if ($a.hasClass('ishide')) {
-                    cuvvic.sendShow("", $a)
+                    //cuvvic.sendShow("", $a)
                 }
             })
 

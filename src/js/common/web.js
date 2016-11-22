@@ -1,4 +1,3 @@
-var $ = require('jquery');
 var api = require('common/api');
 var layer = require('layer');
 var cookie = require('cookie');
