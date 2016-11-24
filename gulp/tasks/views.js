@@ -40,8 +40,8 @@ gulp.task('views', function() {
 // 构建视图文件-build版本
 gulp.task('build:views', ['clean:views'], function() {
     return streamqueue({ objectMode: true },
-            gulp.src(config.pagesSrc, { base: 'src/pages' }),
-            gulp.src(config.componentsSrc, { base: 'src' })
+            gulp.src(config.pagesSrc, { base: 'src/template/view' }),
+            // gulp.src(config.componentsSrc, { base: 'src' })
         )
         .pipe(plumber(handleErrors))
         .pipe(logger({ showChange: true }))
@@ -54,11 +54,7 @@ gulp.task('build:views', ['clean:views'], function() {
                     return false;
                 }
             }
-            /**
-             * 压缩html文件及内嵌于HTML中的JS/CSS
-             * 通过ignoreCustomFragments来适应不同的模板语言
-             */
-           ))
+        ))
         .pipe(gulp.dest(config.dest));
 });
 

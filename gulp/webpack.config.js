@@ -59,6 +59,7 @@ module.exports = function(env){
                 'jquery.cookie': libSrc + '/jquery.cookie/jquery.cookie.min',
                 common3: config.src + '/lib',
                 api3: config.src + '/api',
+                tpl: config.src + '/tpl',
                 cms: 'http://www1.vvic.com/js'
             }
         },
