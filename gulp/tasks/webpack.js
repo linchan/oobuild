@@ -1,6 +1,10 @@
 var gulp = require('gulp');
 var _ = require('lodash');
+var del = require('del');
 var webpack = require('webpack');
+var compileLogger = require('../lib/compileLogger');
+var project = require('../lib/project')();
+var config = require('../config.' + project).webpack;
 
 // 生成js/css
 gulp.task('webpack', ['clean:webpack'], function(callback) {
@@ -39,7 +43,6 @@ gulp.task('build:webpack', ['clean:webpack'], function(callback) {
 // 清理js/css
 gulp.task('clean:webpack', function() {
     return del([
-        config.jsDest,
-        config.cssDest
+        config.jsDest
     ], { force: true });
 });

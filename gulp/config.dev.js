@@ -9,9 +9,9 @@ module.exports = {
     distPath: distPath,
     // webpack任务
     webpack: {
-        context: srcPath + '/template/**/*',
-        src: srcPath + '/js/src/**/*.js',
-        jsDest: distPath + '/js'
+        src: srcPath + '/js',
+        libSrc: path.join(srcPath, '../../lib'),
+        jsDest: distPath + '/js/dist'
     },
 
     // views任务

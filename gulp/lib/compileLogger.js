@@ -1,5 +1,5 @@
 var gutil = require("gulp-util")
-var prettifyTime = require('./prettifyTime')
+// var prettifyTime = require('./prettifyTime')
 var handleErrors = require('./handleErrors')
 
 // 美化webpack的日志输出，强烈推荐！
