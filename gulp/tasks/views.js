@@ -18,29 +18,37 @@ gulp.task('views', function() {
      * src/components需要从src开始获取文件
      * src/pages需要从src/pages开始获取文件
      */
-    return streamqueue({ objectMode: true },
-            gulp.src(config.pagesSrc, { base: 'src/template/view' })
-            // gulp.src(config.componentsSrc, { base: 'src' })
-        )
-        // 错误自启动，彻底解决gulp错误中断的问题【强烈推荐】
-        .pipe(plumber(handleErrors))
-        // 增量更新，加快gulp构建速度【强烈推荐】
-        .pipe(newer(config.dest))
-        // 变动日志输出，和前面的错误自启动、增量更新组成 必备三件套
-        .pipe(logger({ showChange: true }))
-        /**
-         * 根据传入的参数做预处理或条件编译，比如：
-         * 1. 不同项目编译输出不同的代码。
-         * 2. 不同的开发模式编译输出不同的逻辑。
-         */
-        .pipe(preprocess({ context: { PROJECT: project } }))
-        .pipe(gulp.dest(config.dest));
+     gulp.src(config.pagesSrc)
+         .pipe(plumber(handleErrors))
+         .pipe(newer(config.dest))
+         .pipe(logger({showChange: true}))
+         .pipe(preprocess({context: {PROJECT:project}}))
+         .pipe(gulp.dest(config.dest));
+
+    console.log(config.pagesSrc, config.dest);
+    // return streamqueue({ objectMode: true },
+    //         gulp.src(config.pagesSrc, { base: 'src/template/view' })
+    //         // gulp.src(config.componentsSrc, { base: 'src' })
+    //     )
+    //     // 错误自启动，彻底解决gulp错误中断的问题【强烈推荐】
+    //     .pipe(plumber(handleErrors))
+    //     // 增量更新，加快gulp构建速度【强烈推荐】
+    //     .pipe(newer(config.dest))
+    //     // 变动日志输出，和前面的错误自启动、增量更新组成 必备三件套
+    //     .pipe(logger({ showChange: true }))
+    //     /**
+    //      * 根据传入的参数做预处理或条件编译，比如：
+    //      * 1. 不同项目编译输出不同的代码。
+    //      * 2. 不同的开发模式编译输出不同的逻辑。
+    //      */
+    //     .pipe(preprocess({ context: { PROJECT: project } }))
+    //     .pipe(gulp.dest(config.dest));
 });
 
 // 构建视图文件-build版本
 gulp.task('build:views', ['clean:views'], function() {
     return streamqueue({ objectMode: true },
-            gulp.src(config.pagesSrc, { base: 'src/template/view' }),
+            gulp.src(config.pagesSrc, { base: 'src/template/view' })
             // gulp.src(config.componentsSrc, { base: 'src' })
         )
         .pipe(plumber(handleErrors))

@@ -1,6 +1,6 @@
 var path = require('path');
 var VERSON = '3.2.9';
-var viewPath = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-control/src/main/webapp';
+var viewPath = 'E:/project/vvic/branches/website/rebuild/vvic-control/src/main/webapp';
 var srcPath = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-frontend/statics/build/v3';
 var distPath = 'E:/project/vvic/branches/website/'+VERSON+'/vvic-frontend/statics/v3';
 
@@ -18,7 +18,7 @@ module.exports = {
     views: {
         pagesSrc: srcPath + '/template/view/**/**/*',
         staticSrc: srcPath + '/template/static/*.html',
-        dest: viewPath + '/WEB-INF/view'
+        dest: path.join(viewPath,'/WEB-INF/view')
     },
 
     // images任务

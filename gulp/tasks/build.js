@@ -3,7 +3,8 @@ var sequence = require('gulp-sequence');
 // 顺序执行clean，sprites任务，接下来并行执行build:views，build:images，build:webpack任务
 gulp.task('build', sequence(
     'clean',
-    'sprites', [
+    'sprites',
+    'css', [
         'build:views',
         'build:images',
         'build:webpack'
